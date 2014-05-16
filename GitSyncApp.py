@@ -38,7 +38,7 @@ def get_config():
 class GitSyncApp(rumps.App):
 
     def __init__(self):
-        super(GitSyncApp, self).__init__("GitSync", icon='Icon.png')
+        super(GitSyncApp, self).__init__("GitSync", icon='MenuIcon.png')
 
         config = get_config()
 
