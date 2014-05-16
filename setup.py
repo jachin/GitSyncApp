@@ -8,7 +8,10 @@ Usage:
 from setuptools import setup
 
 APP = ['GitSyncApp.py']
-DATA_FILES = ['Icon.png']
+DATA_FILES = [
+    'MenuIcon.png',
+    'GitSyncIcon.icns',
+]
 OPTIONS = {
     'argv_emulation': True,
     'packages': [
@@ -21,6 +24,7 @@ OPTIONS = {
     'plist': {
         'LSUIElement': True,
     },
+    'iconfile': 'GitSyncIcon.icns',
 }
 
 setup(
