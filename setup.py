@@ -8,15 +8,27 @@ Usage:
 from setuptools import setup
 
 APP = ['GitSyncApp.py']
-DATA_FILES = []
+DATA_FILES = ['Icon.png']
 OPTIONS = {
     'argv_emulation': True,
-    'packages': ['rumps'],
+    'packages': [
+        'rumps',
+        'fabric',
+        'gitsync',
+        #'fsevents',
+        'yaml',
+    ],
+    'plist': {
+        'LSUIElement': True,
+    },
 }
 
 setup(
     app=APP,
     data_files=DATA_FILES,
     options={'py2app': OPTIONS},
-    setup_requires=['py2app'],
+    include_package_data=True,
+    setup_requires=[
+        'py2app'
+    ],
 )
